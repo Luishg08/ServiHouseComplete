@@ -1,0 +1,32 @@
+[submodule "MSInventory"]
+	path = MSInventory
+	url = https://github.com/Luishg08/MSInventoryServiHouse
+	branch = development
+[submodule "ApiGateway"]
+	path = ApiGateway
+	url = https://github.com/Luishg08/ApiGatewayServiHouse
+	branch = development
+[submodule "MSBusiness"]
+	path = MSBusiness
+	url = https://github.com/juan-tangarife/MSBusinessServiHouse
+	branch = development
+[submodule "ApiReport"]
+	path = ApiReport
+	url = https://github.com/Luishg08/ApiReportServiHouse
+	branch = development
+[submodule "Frontend"]
+	path = Frontend
+	url = https://github.com/Marian1017l/servihouse-frontend
+	branch = development
+[submodule "MSGeolocalization"]
+	path = MSGeolocalization
+	url = https://github.com/juan-tangarife/MSGeolocalizationServiHouse
+	branch = development
+[submodule "MSNotification"]
+	path = MSNotification
+	url = https://github.com/juan-tangarife/MSNotificationServiHouse
+	branch = development
+[submodule "MSAuth"]
+	path = MSAuth
+	url = https://github.com/Marian1017l/msautenticacion-servihouse
+	branch = development
