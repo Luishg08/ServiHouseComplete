@@ -1,0 +1,727 @@
+{
+	"info": {
+		"_postman_id": "a9888c6d-0db3-4e12-ac2e-0770595a8763",
+		"name": "MSBusiness",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33239247",
+		"_collection_link": "https://ucaldas.postman.co/workspace/ServiHouse~4b1c44b6-8e67-4a06-9183-432d62a6ae5e/collection/44261881-a9888c6d-0db3-4e12-ac2e-0770595a8763?action=share&source=collection_link&creator=33239247"
+	},
+	"item": [
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\" : \"Carrera 29 #46-14\",\r\n    \"city\": \"MANIZALES\",\r\n    \"department\": \"CALDAS\",\r\n    \"altitude\": \"-75.50390717005214\",\r\n    \"latitude\": \"5.061691561766945\",\r\n    \"restock\": true,\r\n    \"products\":[\r\n        {\r\n            \"product_id\": \"P007\",\r\n            \"storage_id\": \"ALM002\",\r\n            \"amount\": 1\r\n        },\r\n         {\r\n            \"product_id\": \"P010\",\r\n            \"storage_id\": \"ALM002\",\r\n            \"amount\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/orders/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"orders",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Create Location",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"altitude\": 100,\n  \"latitude\": 4.60971,\n  \"static\": true,\n  \"address\": \"Cra 1 # 2-3\",\n  \"city\": \"Bogotá\",\n  \"department\": \"Cundinamarca\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/location/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"location",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/location/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"location",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/location/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"location",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"altitude\": 200,\n  \"latitude\": 4.60972,\n  \"static\": false,\n  \"address\": \"Cra 4 # 5-6\",\n  \"city\": \"Bogotá\",\n  \"department\": \"Cundinamarca\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/location/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"location",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/location/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"location",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "Create Manager",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"full_name\": \"Luis Henao\",\n  \"email\": \"luis.hg08@outlook.com\",\n  \"phone\": \"3044583144\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/manager/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"manager",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Managers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/manager/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"manager",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Manager By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/manager/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"manager",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Manager",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"full_name\": \"Jane Doe\",\n  \"email\": \"jane@example.com\",\n  \"phone\": \"0987654321\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/manager/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"manager",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Manager",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/manager/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"manager",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provider",
+			"item": [
+				{
+					"name": "Create Provider",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"id\": \"POLH0807\",\n  \"name\": \"P0LH0807\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/provider/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"provider",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Providers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/provider/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"provider",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Provider By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/provider/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"provider",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Provider",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Provider Updated\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/provider/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"provider",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Provider",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/provider/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"provider",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dispatcher",
+			"item": [
+				{
+					"name": "Create Dispatcher",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"full_name\": \"Luis Henao\",\n  \"email\": \"luis.hg08@outlook.com\",\n  \"phone\": \"3044583144\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/dispatcher/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"dispatcher",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Dispatchers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/dispatcher/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"dispatcher",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dispatcher By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/dispatcher/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"dispatcher",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Dispatcher",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"full_name\": \"Dispatcher Updated\",\n  \"email\": \"dispatcher1updated@example.com\",\n  \"phone\": \"0987654321\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/dispatcher/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"dispatcher",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Dispatcher",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/dispatcher/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"dispatcher",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "Create Delivery",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"full_name\": \"Luis Henao\",\n  \"location_id\": 20\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/delivery/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"delivery",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Deliveries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/delivery/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"delivery",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Delivery By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/delivery/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"delivery",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Delivery",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"full_name\": \"Delivery Updated\",\n  \"location_id\": 1\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/business/delivery/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"delivery",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Delivery",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/business/delivery/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"business",
+								"delivery",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,542 @@
+{
+	"info": {
+		"_postman_id": "ebbf75c8-efab-419d-b7e5-04b761033e43",
+		"name": "MSInventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33239247",
+		"_collection_link": "https://ucaldas.postman.co/workspace/ServiHouse~4b1c44b6-8e67-4a06-9183-432d62a6ae5e/collection/33239247-ebbf75c8-efab-419d-b7e5-04b761033e43?action=share&source=collection_link&creator=33239247"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Camiseta\",\r\n    \"category\": \"Ropa\",\r\n    \"description\": \"Azul talla M\",\r\n    \"price\": 20500.23,\r\n    \"picture\": \"https://servihouse.com/assets/images/camiseta\",\r\n    \"fragile\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Camiseta\",\r\n    \"category\": \"Ropa\",\r\n    \"description\": \"Azul talla M\",\r\n    \"price\": 20500.23,\r\n    \"picture\": \"https://servihouse.com/assets/images/camiseta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/product/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"product",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Camiseta\",\r\n    \"category\": \"Ropa\",\r\n    \"description\": \"Azul talla M\",\r\n    \"price\": 20500.23,\r\n    \"picture\": \"https://servihouse.com/assets/images/camiseta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/product/getById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"product",
+								"getById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Camisa\",\r\n    \"category\": \"Ropa\",\r\n    \"description\": \"Azul talla M\",\r\n    \"price\": 20500.23,\r\n    \"picture\": \"https://servihouse.com/assets/images/camiseta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/product/update/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"product",
+								"update",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Camisa\",\r\n    \"category\": \"Ropa\",\r\n    \"description\": \"Azul talla M\",\r\n    \"price\": 20500.23,\r\n    \"picture\": \"https://servihouse.com/assets/images/camiseta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/product/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"product",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTUzMTgzMjg2ZjVhYjA4YjJmNjdmZCIsInVzZXJfbmFtZSI6ImxoZW5hbzA4IiwiZW1haWwiOiJsdWlzLmhnMDhAb3V0bG9vay5jb20iLCJwaG9uZSI6IjMwNDQ1ODMxNDQiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGVSb2wiLCJ1cGRhdGVSb2wiLCJkZWxldGVSb2wiLCJnZXRBbGxSb2xzIiwiZ2V0Um9sQnlJZCIsImNyZWF0ZVByb2R1Y3QiLCJnZXRBbGxQcm9kdWN0cyIsImdldFByb2R1Y3RCeUlkIiwidXBkYXRlUHJvZHVjdCIsImRlbGV0ZVByb2R1Y3QiLCJjcmVhdGVTdG9yYWdlIiwiZ2V0QWxsU3RvcmFnZXMiLCJnZXRTdG9yYWdlQnlJZCIsInVwZGF0ZVN0b3JhZ2UiLCJkZWxldGVTdG9yYWdlIiwidXBsb2FkRmlsZSJdLCJyb2wiOiJTVVBFUkFETUlOIiwiaWF0IjoxNzQ3MDE2NDM5LCJleHAiOjE3NDcwMjAwMzl9.taVc20u5BOn81JxpcMdPjNo4K7tzDyemyGl1KbebBLc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/luish/OneDrive - CONSENSUS SAS/Documentos/Universidad/Ingeniería De Software II/ServiHouse/MSInventoryServiHouse/products.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/product/uploadProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"product",
+								"uploadProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Storage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/product/getProductsByStorage/ALM004",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"product",
+								"getProductsByStorage",
+								"ALM004"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Storage",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Camiseta\",\r\n    \"category\": \"Ropa\",\r\n    \"description\": \"Azul talla M\",\r\n    \"price\": 20500.23,\r\n    \"picture\": \"https://servihouse.com/assets/images/camiseta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/storage/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"storage",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Camiseta\",\r\n    \"category\": \"Ropa\",\r\n    \"description\": \"Azul talla M\",\r\n    \"price\": 20500.23,\r\n    \"picture\": \"https://servihouse.com/assets/images/camiseta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/storage/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"storage",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Chinchiná_40P\",\r\n    \"admin_id\" : 1,\r\n    \"location_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/storage/update/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"storage",
+								"update",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Camisa\",\r\n    \"category\": \"Ropa\",\r\n    \"description\": \"Azul talla M\",\r\n    \"price\": 20500.23,\r\n    \"picture\": \"https://servihouse.com/assets/images/camiseta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/storage/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"storage",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Chinchiná_40P\",\r\n    \"admin_id\" : 1,\r\n    \"location_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/storage/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"storage",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Storages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTUzMTgzMjg2ZjVhYjA4YjJmNjdmZCIsInVzZXJfbmFtZSI6ImxoZW5hbzA4IiwiZW1haWwiOiJsdWlzLmhnMDhAb3V0bG9vay5jb20iLCJwaG9uZSI6IjMwNDQ1ODMxNDQiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGVSb2wiLCJ1cGRhdGVSb2wiLCJkZWxldGVSb2wiLCJnZXRBbGxSb2xzIiwiZ2V0Um9sQnlJZCIsImNyZWF0ZVByb2R1Y3QiLCJnZXRBbGxQcm9kdWN0cyIsImdldFByb2R1Y3RCeUlkIiwidXBkYXRlUHJvZHVjdCIsImRlbGV0ZVByb2R1Y3QiLCJjcmVhdGVTdG9yYWdlIiwiZ2V0QWxsU3RvcmFnZXMiLCJnZXRTdG9yYWdlQnlJZCIsInVwZGF0ZVN0b3JhZ2UiLCJkZWxldGVTdG9yYWdlIiwidXBsb2FkRmlsZSJdLCJyb2wiOiJTVVBFUkFETUlOIiwiaWF0IjoxNzQ3MDE2NDM5LCJleHAiOjE3NDcwMjAwMzl9.taVc20u5BOn81JxpcMdPjNo4K7tzDyemyGl1KbebBLc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/luish/OneDrive - CONSENSUS SAS/Documentos/Universidad/Ingeniería De Software II/ServiHouse/MSInventoryServiHouse/storages.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/storage/uploadStorages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"storage",
+								"uploadStorages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "Upload Inventory File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/luish/OneDrive - CONSENSUS SAS/Documentos/Universidad/Ingeniería De Software II/ServiHouse/MSInventoryServiHouse/csv example(Hoja1).csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/GeneralInventory/uploadInventory2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"GeneralInventory",
+								"uploadInventory2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "Get Stock By Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8070/api/v1/inventory/stock/stockByProduct/P001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"stock",
+								"stockByProduct",
+								"P001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

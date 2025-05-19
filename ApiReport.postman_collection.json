@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "e229a7a2-d3d7-4b4d-bc63-96d395505da4",
+		"name": "ApiReport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33239247",
+		"_collection_link": "https://ucaldas.postman.co/workspace/ServiHouse~4b1c44b6-8e67-4a06-9183-432d62a6ae5e/collection/33239247-e229a7a2-d3d7-4b4d-bc63-96d395505da4?action=share&source=collection_link&creator=33239247"
+	},
+	"item": [
+		{
+			"name": "Prueba",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/api/report/TestApiReport",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"api",
+						"report",
+						"TestApiReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger UI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"docs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

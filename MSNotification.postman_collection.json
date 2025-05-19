@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "a6c0f11b-4a63-41c5-8f27-e34a14dabd4d",
+		"name": "MSNotification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33239247",
+		"_collection_link": "https://ucaldas.postman.co/workspace/ServiHouse~4b1c44b6-8e67-4a06-9183-432d62a6ae5e/collection/33239247-a6c0f11b-4a63-41c5-8f27-e34a14dabd4d?action=share&source=collection_link&creator=33239247"
+	},
+	"item": [
+		{
+			"name": "Email Verify Code",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jjoset26@gmail.com\",\r\n    \"code\": \"123456\",\r\n    \"name\": \"Juan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/email/VerifyCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"email",
+						"VerifyCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email 2FA Code",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"luis.hg08@outlook.com\",\r\n    \"code\": \"123456\",\r\n    \"name\": \"Lucho\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/email/2FACode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"email",
+						"2FACode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Forgot Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"luis.hg08@outlook.com\",\r\n    \"hash\": \"http://localhost:4000/auth/forgotpassword?hash=35u9834hg3478tr34yi5u43gh3uieh3ibvg4uibvjneiuv3g3\",\r\n    \"name\": \"Lucho\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/email/ForgotPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"email",
+						"ForgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Restore Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"luis.hg08@outlook.com\",\r\n    \"hash\": \"http://localhost:4000/auth/forgotpassword?hash=35u9834hg3478tr34yi5u43gh3uieh3ibvg4uibvjneiuv3g3\",\r\n    \"name\": \"Lucho\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/email/RestorePassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"email",
+						"RestorePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS Verify Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Lucho\",\r\n    \"code\": \"123456\",\r\n    \"phone\": \"3044583144\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/message/VerifyCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"message",
+						"VerifyCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS 2FA Code",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Lucho\",\r\n    \"code\": \"123456\",\r\n    \"phone\": \"3044583144\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/message/2FACode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"message",
+						"2FACode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS Forgot Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"3044583144\",\r\n    \"hash\": \"https://servihouse.com/auth/forgotpassword?hash=35u9834hg3478tr34yi5u43gh3uieh3ibvg4uibvjneiuv3g3\",\r\n    \"name\": \"Lucho\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/message/ForgotPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"message",
+						"ForgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS Restore Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"3044583144\",\r\n    \"hash\": \"https://servihouse.com/auth/forgotpassword?hash=35u9834hg3478tr34yi5u43gh3uieh3ibvg4uibvjneiuv3g3\",\r\n    \"name\": \"Lucho\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/message/RestorePassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"message",
+						"RestorePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email Low Stock",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"LUIS HENAO\",\r\n    \"product\": \"Lavadora\",\r\n    \"storage\": \"Chinchiná P013\",\r\n    \"amount\": 8,\r\n    \"min_amount\": 10,\r\n    \"email\": \"luis.hg08@outlook.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/email/LowStockAlert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"email",
+						"LowStockAlert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS Low Stock",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"LUIS HENAO\",\r\n    \"product\": \"Lavadora\",\r\n    \"storage\": \"Chinchiná P013\",\r\n    \"amount\": 8,\r\n    \"min_amount\": 10,\r\n    \"phone\": \"3044583144\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8010/api/notification/message/LowStockAlert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8010",
+					"path": [
+						"api",
+						"notification",
+						"message",
+						"LowStockAlert"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

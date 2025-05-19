@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "2ec15799-e3c1-4b29-8146-44e369767c48",
+		"name": "ApiGateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33239247",
+		"_collection_link": "https://ucaldas.postman.co/workspace/ServiHouse~4b1c44b6-8e67-4a06-9183-432d62a6ae5e/collection/33239247-2ec15799-e3c1-4b29-8146-44e369767c48?action=share&source=collection_link&creator=33239247"
+	},
+	"item": [
+		{
+			"name": "Prueba",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendVerifyCode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/notification/email/VerifyCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notification",
+						"email",
+						"VerifyCode"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

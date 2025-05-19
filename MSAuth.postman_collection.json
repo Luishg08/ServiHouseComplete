@@ -1,0 +1,712 @@
+{
+	"info": {
+		"_postman_id": "831d4942-9375-4d1b-9f52-3e8832e643b7",
+		"name": "MSAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33239247",
+		"_collection_link": "https://ucaldas.postman.co/workspace/ServiHouse~4b1c44b6-8e67-4a06-9183-432d62a6ae5e/collection/33239247-831d4942-9375-4d1b-9f52-3e8832e643b7?action=share&source=collection_link&creator=33239247"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"luish08\",\r\n    \"email\":\"luis.hg0807@gmail.com\",\r\n    \"phone\":\"3044583144\",\r\n    \"password\":\"L123456*\",\r\n    \"rol_name\":\"SUPERADMIN\",\r\n    \"email_notification\": true,\r\n    \"full_name\": \"Luis Henao\",\r\n    \"city\": \"MANIZALES\",\r\n    \"department\": \"CALDAS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/SignUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"SignUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"juanjot\",\r\n    \"password\":\"JuanJo1234*\",\r\n    \"email_notification\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/SignIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"SignIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"lhenao\",\r\n    \"email\":\"lhenao@consensussa.com\",\r\n    \"phone\":\"3044583144\",\r\n    \"emailNotification\": true\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/resendVerifyCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"resendVerifyCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend 2FA Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"lhenao08\",\r\n    \"email\":\"luis.hg08@outlook.com\",\r\n    \"phone\":\"3044583144\",\r\n    \"email_notification\": true\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/resend2FACode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"resend2FACode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"juanjot\",\r\n    \"code\": \"472608\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/VerifyCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"VerifyCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify 2FA Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"juanjot\",\r\n    \"code\": \"356858\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/Verify2FACode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"Verify2FACode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"luis.hg08\",\r\n    \"emailNotification\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/SendForgotPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"SendForgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"luis.hg08\",\r\n    \"emailNotification\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/SendResetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"SendResetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Password With Old",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTUzMTgzMjg2ZjVhYjA4YjJmNjdmZCIsInVzZXJfbmFtZSI6ImxoZW5hbzA4IiwiZW1haWwiOiJsdWlzLmhnMDhAb3V0bG9vay5jb20iLCJwaG9uZSI6IjMwNDQ1ODMxNDQiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGVSb2wiLCJ1cGRhdGVSb2wiLCJkZWxldGVSb2wiLCJnZXRBbGxSb2xzIiwiZ2V0Um9sQnlJZCIsInJlc3RvcmVQYXNzd29yZCJdLCJpYXQiOjE3NDYyMTk2MjgsImV4cCI6MTc0NjIyMzIyOH0.LIYeV1A_4qq54iRKF-tD6Ax40xuMQwg2KiSiOfIPKhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"lhenao08\",\r\n    \"old_password\": \"Juanita08072004*\",\r\n    \"new_password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/ResetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"ResetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"luis.hg08\",\r\n    \"newPassword\": \"123456\",\r\n    \"hash\": \"$2b$10$q6GPI77viF8H9DRIwnx31Ol90UcmCBzkFcZTTiokLRqOH/nOdu1fC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/ForgotPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"ForgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/GetUserById/6815245956d66809deb9c95e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"GetUserById",
+								"6815245956d66809deb9c95e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"altitude\": \"12222\",\r\n    \"latitude\": \"333333\",\r\n    \"static\": true,\r\n    \"address\": \"Central Park\",\r\n    \"city\": \"New York\",\r\n    \"department\": \"New York\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/GetAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"GetAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_name\": \"nuevo_usuario\",\n  \"email\": \"nuevo@email.com\",\n  \"phone\": \"3001234567\",\n  \"status\": \"ACTIVE\",\n  \"rol_id\": \"ROL_ID_AQUI\",\n  \"city\": \"Bogotá\",\n  \"department\": \"Cundinamarca\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/UpdateUser/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"UpdateUser",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/auth/user/DeleteUser/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"user",
+								"DeleteUser",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Create Rol",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTM5ZTI2NWVjYzNmY2Q5NWI5Zjc0ZiIsInVzZXJOYW1lIjoibGhlbmFvIiwiZW1haWwiOiJsdWlzLmhnMDhAb3V0bG9vay5jb20iLCJwaG9uZSI6IjMwNDQ1ODMxNDQiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGVSb2wiLCJ1cGRhdGVSb2wiLCJkZWxldGVSb2wiLCJnZXRBbGxSb2xzIiwiZ2V0Um9sQnlJZCJdLCJpYXQiOjE3NDYyMTQ4OTYsImV4cCI6MTc0NjIxODQ5Nn0.Tik9_l0fm9cTo_aQXKPaObkHfO88Yp33GIGWxYA9VP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"GUEST\",\r\n    \"description\": \"hola\",\r\n    \"permissions\": [\r\n        \"viewHome\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/rol/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"rol",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTM5ZTI2NWVjYzNmY2Q5NWI5Zjc0ZiIsInVzZXJOYW1lIjoibGhlbmFvIiwiZW1haWwiOiJsdWlzLmhnMDhAb3V0bG9vay5jb20iLCJwaG9uZSI6IjMwNDQ1ODMxNDQiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGVSb2wiLCJ1cGRhdGVSb2wiLCJkZWxldGVSb2wiLCJnZXRBbGxSb2xzIiwiZ2V0Um9sQnlJZCJdLCJpYXQiOjE3NDYyMTQ4OTYsImV4cCI6MTc0NjIxODQ5Nn0.Tik9_l0fm9cTo_aQXKPaObkHfO88Yp33GIGWxYA9VP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/auth/rol/GetAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"rol",
+								"GetAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rol By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTM5ZTI2NWVjYzNmY2Q5NWI5Zjc0ZiIsInVzZXJOYW1lIjoibGhlbmFvIiwiZW1haWwiOiJsdWlzLmhnMDhAb3V0bG9vay5jb20iLCJwaG9uZSI6IjMwNDQ1ODMxNDQiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGVSb2wiLCJ1cGRhdGVSb2wiLCJkZWxldGVSb2wiLCJnZXRBbGxSb2xzIiwiZ2V0Um9sQnlJZCJdLCJpYXQiOjE3NDYyMTQ4OTYsImV4cCI6MTc0NjIxODQ5Nn0.Tik9_l0fm9cTo_aQXKPaObkHfO88Yp33GIGWxYA9VP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/rol/GetById/6815203e56d66809deb9c95c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"rol",
+								"GetById",
+								"6815203e56d66809deb9c95c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Rol",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTUzMTgzMjg2ZjVhYjA4YjJmNjdmZCIsInVzZXJfbmFtZSI6ImxoZW5hbzA4IiwiZW1haWwiOiJsdWlzLmhnMDhAb3V0bG9vay5jb20iLCJwaG9uZSI6IjMwNDQ1ODMxNDQiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGVSb2wiLCJ1cGRhdGVSb2wiLCJkZWxldGVSb2wiLCJnZXRBbGxSb2xzIiwiZ2V0Um9sQnlJZCIsInJlc3RvcmVQYXNzd29yZCJdLCJyb2wiOiJTVVBFUkFETUlOIiwiaWF0IjoxNzQ3MDE2MjM2LCJleHAiOjE3NDcwMTk4MzZ9.3-f1D-xv6x0nQiI4OG7E7KwTTHPdMQtnPNItKhcQyfU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"SUPERADMIN\",\r\n    \"description\": \"All permissions\",\r\n   \"permissions\": [\r\n    \"createRol\",\r\n    \"updateRol\",\r\n    \"deleteRol\",\r\n    \"getAllRols\",\r\n    \"getRolById\",\r\n    \"createProduct\",\r\n    \"getAllProducts\",\r\n    \"getProductById\",\r\n    \"updateProduct\",\r\n    \"deleteProduct\",\r\n    \"createStorage\",\r\n    \"getAllStorages\",\r\n    \"getStorageById\",\r\n    \"updateStorage\",\r\n    \"deleteStorage\",\r\n    \"uploadFile\"\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/api/auth/rol/Update/68139d60fda6fcd089fc780e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"rol",
+								"Update",
+								"68139d60fda6fcd089fc780e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Rol Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTM5ZTI2NWVjYzNmY2Q5NWI5Zjc0ZiIsInVzZXJOYW1lIjoibGhlbmFvIiwiZW1haWwiOiJsdWlzLmhnMDhAb3V0bG9vay5jb20iLCJwaG9uZSI6IjMwNDQ1ODMxNDQiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGVSb2wiLCJ1cGRhdGVSb2wiLCJkZWxldGVSb2wiLCJnZXRBbGxSb2xzIiwiZ2V0Um9sQnlJZCJdLCJpYXQiOjE3NDYxMTY3ODMsImV4cCI6MTc0NjEyMDM4M30.pKFN5gDIiaayS6AtOvN8ELRic9ecHazu0kzNbBJFXhY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/auth/rol/Delete/68139ec85ecc3fcd95b9f751",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"rol",
+								"Delete",
+								"68139ec85ecc3fcd95b9f751"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Utilities",
+			"item": [
+				{
+					"name": "Get Departments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJsaGVuYW8iLCJlbWFpbCI6Imx1aXMuaGcwOEBvdXRsb29rLmNvbSIsImlhdCI6MTc0NTc4MTY0OCwiZXhwIjoxNzc3MzE3NjQ4fQ.hNo7oaRdf1vDr89onjKqUtmpzuU0BxmNNGA5ioPJTb4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/auth/utilities/departments/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"utilities",
+								"departments",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cities By Department",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/api/auth/utilities/cities/Caldas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"auth",
+								"utilities",
+								"cities",
+								"Caldas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
